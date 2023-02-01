@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve smart-terrarium api
+After=network.target
+
+[Service]
+User=admin
+Group=www-data
+
+WorkingDirectory=/var/smart-terrarium/api
+ExecStart=python -m gunicorn --workers 1 --bind unix:app.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target
