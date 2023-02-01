@@ -21,3 +21,4 @@ copy ..\configs\systemmd-app.service Z:\smart-terrarium-temp\configs\smart-terra
 :: Copy script to be localy run on RPi
 copy .\local_deploy.sh Z:\smart-terrarium-temp\local_deploy.sh
 copy .\bump_front.sh Z:\smart-terrarium-temp\bump_front.sh
+copy .\bump_backend.sh Z:\smart-terrarium-temp\bump_backend.sh
