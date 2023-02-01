@@ -1,1 +1,4 @@
-# smart-terrarium
+# Smart Terrarium
+
+Project for controlling terrarium.
+Based on Raspberry PI v1.
