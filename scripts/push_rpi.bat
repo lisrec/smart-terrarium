@@ -1,10 +1,14 @@
 @echo off
 
 :: Create working directories on RPi home
+mkdir Z:\music
 mkdir Z:\smart-terrarium-temp
 mkdir Z:\smart-terrarium-temp\api
 mkdir Z:\smart-terrarium-temp\www
 mkdir Z:\smart-terrarium-temp\configs
+
+:: Copy music to RPi
+robocopy ..\music Z:\music /s /e
 
 :: Copy backend python files to RPi
 robocopy ..\backend Z:\smart-terrarium-temp\api /s /e
@@ -22,3 +26,6 @@ copy ..\configs\systemmd-app.service Z:\smart-terrarium-temp\configs\smart-terra
 copy .\local_deploy.sh Z:\smart-terrarium-temp\local_deploy.sh
 copy .\bump_front.sh Z:\smart-terrarium-temp\bump_front.sh
 copy .\bump_backend.sh Z:\smart-terrarium-temp\bump_backend.sh
+
+:: Copy infinity loop music script to music on RPi
+copy .\play_infinity.sh Z:\music\play_infinity.sh
