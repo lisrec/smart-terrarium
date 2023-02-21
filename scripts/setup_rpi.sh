@@ -6,3 +6,5 @@ if [ "$EUID" -ne 0 ]
 fi
 
 apt update
+apt upgrade
+apt install python3 python3-pip
