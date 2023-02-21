@@ -5,6 +5,10 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-apt update
-apt upgrade -y
-apt install -y python3 python3-pip
+# apt update
+# apt upgrade -y
+
+# apt install -y python3 python3-pip
+apt install -y nginx
+
+pip3 install RPi.GPIO
