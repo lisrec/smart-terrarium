@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
@@ -16,9 +16,8 @@ pip3 install flask
 
 # NVM
 touch ~/.bashrc
-su - admin -c "wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash"
-source ~/.bashrc
-exec bash
+# su - admin -c "wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash"
+. ~/.bashrc
 nvm install 16
 nvm install 18
 
