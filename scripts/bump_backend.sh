@@ -7,7 +7,7 @@ fi
 
 echo "Coping files..."
 mkdir -p /var/smart-terrarium/api
-cp -r ./api/* /var/smart-terrarium/api
+cp -r ./backend/* /var/smart-terrarium/api
 
 echo "Setting directory owners..."
 chown -R admin:www-data /var/smart-terrarium/api

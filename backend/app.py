@@ -28,7 +28,7 @@ def clear_music():
     music_playing = False
 
 def _music_thread():
-    run(["/home/admin/music/play_infinity.sh"])
+    run(["/home/admin/smart-terrarium/music/play_infinity.sh"])
 
 def play_music():
     clear_music()

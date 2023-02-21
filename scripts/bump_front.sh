@@ -7,7 +7,7 @@ fi
 
 echo "Coping files..."
 mkdir -p /var/smart-terrarium/www
-cp -r ./www/* /var/smart-terrarium/www
+cp -r ./frontend/dist/* /var/smart-terrarium/www
 
 echo "Setting directory owners..."
 chgrp -R www-data /var/smart-terrarium/www
