@@ -5,8 +5,6 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-pwd
-
 echo "Coping files..."
 mkdir -p /var/smart-terrarium/api
 mkdir -p /var/smart-terrarium/www
@@ -28,7 +26,7 @@ systemctl enable smart-terrarium
 systemctl start smart-terrarium
 
 echo "Configure nginx service..."
-rm /etc/nginx/sites-enabled/default
+rm /etc/nginx/sites-enabled/*
 cp ./configs/nginx.conf /etc/nginx/sites-available/smart-terrarium.conf
 ln -s /etc/nginx/sites-available/smart-terrarium.conf /etc/nginx/sites-enabled/
 systemctl restart nginx

@@ -21,6 +21,12 @@ def OnExitApp():
 
 atexit.register(OnExitApp)
 
+def server_shutdown():
+    os.system("shutdown +1")
+    GPIO.cleanup()
+    raise RuntimeError("Server going down")
+
+
 def clear_music():
     os.system("pkill -9 play_infinity")
     os.system("killall aplay")
@@ -53,6 +59,11 @@ def start():
 @app.post("/music/stop")
 def stop():
     clear_music()
+    return Response(status=200)
+
+@app.post("/server/shutdown")
+def shutdown():
+    server_shutdown()
     return Response(status=200)
 
 if __name__ == '__main__':
