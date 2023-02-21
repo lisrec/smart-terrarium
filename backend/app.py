@@ -22,7 +22,7 @@ def OnExitApp():
 atexit.register(OnExitApp)
 
 def server_shutdown():
-    os.system("shutdown +1")
+    os.system("sudo shutdown +1")
     GPIO.cleanup()
     raise RuntimeError("Server going down")
 
