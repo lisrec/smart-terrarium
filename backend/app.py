@@ -22,10 +22,8 @@ def OnExitApp():
 atexit.register(OnExitApp)
 
 def server_shutdown():
-    os.system("sudo shutdown +1")
     GPIO.cleanup()
-    raise RuntimeError("Server going down")
-
+    os.system("sudo shutdown now")
 
 def clear_music():
     os.system("pkill -9 play_infinity")
