@@ -28,6 +28,7 @@ systemctl enable smart-terrarium
 systemctl start smart-terrarium
 
 echo "Configure nginx service..."
+rm /etc/nginx/sites-enabled/default
 cp ./configs/nginx.conf /etc/nginx/sites-available/smart-terrarium.conf
 ln -s /etc/nginx/sites-available/smart-terrarium.conf /etc/nginx/sites-enabled/
 systemctl restart nginx

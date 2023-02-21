@@ -22,7 +22,7 @@ echo "Installing python libraries..."
 echo "Installing NVM and NodeJS..."
 # touch ~/.bashrc
 # su - admin -c "wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash"
-# . ~/.bashrc
+. ~/.bashrc
 # nvm install 16
 # nvm install 18
 
