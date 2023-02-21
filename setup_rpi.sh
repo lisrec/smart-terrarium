@@ -14,17 +14,17 @@ echo "Installing required linux packages..."
 
 # Install python libs
 echo "Installing python libraries..."
-pip3 install RPi.GPIO
-pip3 install flask
-pip3 install gunicorn
+# pip3 install RPi.GPIO
+# pip3 install flask
+# pip3 install gunicorn
 
 # NVM
 echo "Installing NVM and NodeJS..."
-touch ~/.bashrc
-su - admin -c "wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash"
-. ~/.bashrc
-nvm install 16
-nvm install 18
+# touch ~/.bashrc
+# su - admin -c "wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash"
+# . ~/.bashrc
+# nvm install 16
+# nvm install 18
 
 # build frontend
 echo "Building frontend application..."
