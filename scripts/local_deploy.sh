@@ -5,6 +5,8 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+pwd
+
 echo "Coping files..."
 mkdir -p /var/smart-terrarium/api
 mkdir -p /var/smart-terrarium/www
